@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include templates/head.pug
+	body.o-body.o-body_single
+		include templates/header.pug
+		.o-body__content
+			.c-hero
+				.c-hero__img
+					img(src=require("@/img/content/corp-training.jpg"), alt="")
+				.container.c-hero__title-wrap.d-flex.align-items-end
+					h2.c-hero__title Корпоративное <br> обучение
+			.container
+				.row
+					.col-md-6
+						h3.h-mb-9 Корпоративное обучение <br> английскому, немецкому, <br> испанскому и французскому языкам
+				.row
+					.col-md-6.s-article.h-mb-4
+						p Обучение является неотъемлемой частью трудового процесса, а корпоративное обучение иностранным языкам давно стало эффективным способом достигнуть ряд задач:
+						ul
+							li повысить квалификацию сотрудников
+							li повысить лояльность в компании
+							li улучшить рабочую атмосферу между сотрудниками
+						p Центр "Говорун" в Солнцево предлагает Вам услуги корпоративного обучения иностранным языкам. Мы предоставляем: 
+						ul
+							li квалифицированных преподавателей
+							li подбор и разработку программы, согласно запросам и нуждам Вашей компании (общий английский, бизнес английский, разговорный английский, специализированные программы и т.д)
+							li индивидуальное и групповое обучение
+							li тестирование и формирование групп
+					.col-md-6
+						h6.h-color-primary.h-font-weight-500 Отзывы клиентов
+						.c-slider-primary
+							.swiper-container.js-slider-primary.h-mb-3
+								.swiper-wrapper
+									.swiper-slide.js-gallery-base.c-certificate-block
+										a(href=require("@/img/content/certificate.jpg")).c-gallery-item.c-certificate-block__preview.h-mb-2
+											img(src=require("@/img/content/certificate.jpg"), alt="")
+										h5 ООО "Торговые операции"
+									.swiper-slide.js-gallery-base.c-certificate-block
+										a(href=require("@/img/content/certificate.jpg")).c-gallery-item.c-certificate-block__preview.h-mb-2
+											img(src=require("@/img/content/certificate.jpg"), alt="")
+										h5 МОО "Немецкое молодежное объединение"
+									.swiper-slide.js-gallery-base.c-certificate-block
+										a(href=require("@/img/content/certificate.jpg")).c-gallery-item.c-certificate-block__preview.h-mb-2
+											img(src=require("@/img/content/certificate.jpg"), alt="")
+										h5 ООО "Торговые операции"
+							.d-flex.justify-content-end
+								.c-slider-primary__controls
+									button.swiper-button-prev
+									.js-slider-primary-counter.c-slider-primary__counter 1/6
+									button.swiper-button-next
+		include templates/footer.pug
+		include templates/icons.pug

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include templates/head.pug
+	body.o-body
+		include templates/header.pug
+		.o-body__content.container
+			h2.o-body__title Наши программы
+			.o-body__body
+				.row
+					-
+						var programs = [{color: 'yellow', title: 'Английский <br> для детей', icon: 'cubes'}, {color: 'blue', title: 'Английский <br> для взрослых', icon: 'briefcase'}, {color: 'green', title: 'Подготовка <br> к ОГЭ и ЕГЭ', icon: 'test'}, {color: 'orange', title: 'Международные <br> экзамены', icon: 'book'}, {color: 'red', title: 'Разговорный <br> клуб с носителем', icon: 'man'}, {color: 'blue', title: 'Корпоративное <br> обучение', icon: 'case'}, {color: 'yellow', title: 'Летние <br> программы', icon: 'sun'}, {color: 'green', title: 'Немецкий <br> для детей', icon: 'cubes'}, {color: 'red', title: 'Немецкий <br> для взрослых', icon: 'briefcase'}]
+					each program in programs
+						.col-md-6.h-mb-6
+							.c-card-preview.d-flex.flex-column.justify-content-between(class="c-card-preview_"+program.color)
+								.d-flex.justify-content-between.h-mb-4
+									h3.c-card-preview__title!=program.title
+									img(src=require("@/img/icons/"+program.icon+".svg")).c-card-preview__icon
+								.row
+									.col-md-6
+										button.c-btn.c-btn_outline.c-card-preview__action(class="c-btn_"+program.color).h-w-100 Подробнее
+		include templates/footer.pug
+		include templates/icons.pug

@@ -1,0 +1,18 @@
+.c-socials{
+	display: flex;
+	align-items: center;
+
+	&__icon{
+		height: 3rem;
+		max-width: 3rem;
+
+		&_youtube{
+			height: 4rem;
+			max-width: 4rem;
+		}
+	}
+
+	&__link{
+		margin: 0 .5rem;
+	}
+}

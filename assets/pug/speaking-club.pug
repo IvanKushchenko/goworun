@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include templates/head.pug
+	body.o-body.o-body_single
+		include templates/header.pug
+		.o-body__content
+			.c-hero
+				.c-hero__img
+					img(src=require("@/img/content/speaking-club.jpg"), alt="")
+				.container.c-hero__title-wrap.d-flex.align-items-end
+					h2.c-hero__title Разговорный клуб <br> с носителем
+			.container
+				.row
+					.col-md-6
+						h3.h-mb-9 Когда хочется общаться! <br> Разговорные клубы <br> с носителем языка по субботам
+				.row.h-mb-9
+					.col-md-6.s-article.h-mb-4
+						p Разговорный английский клуб с носителем языка в Солнцево - отличная возможность улучшить коммуникативные навыки, преодолеть языковой барьер, укрепить полученные на уроках знания, общаться на английском языке с новыми людьми, улучшить восприятие живой речи на слух.
+						p В разговорном клубе Вас ждут: 
+						ul
+							li интересные дискуссии
+							li новые темы для обсуждений каждую неделю
+							li коммуникативные игры
+						p Клубы для детей и взрослых ведет опытный преподаватель, носитель языка из США.     
+					.col-md-6
+						h6.h-color-primary.h-font-weight-500 Отзывы клиентов
+						.c-slider-primary
+							.swiper-container.js-slider-primary.h-mb-3
+								.swiper-wrapper
+									.c-gallery-block.swiper-slide
+										.c-gallery-block__preview.js-gallery-base
+											a(href=require("@/img/content/gallery.jpg")).c-gallery-item
+												img(src=require("@/img/content/gallery.jpg"), alt="").c-gallery-block__img
+									.c-gallery-block.swiper-slide
+										.c-gallery-block__preview.js-gallery-base
+											a(href=require("@/img/content/gallery.jpg")).c-gallery-item
+												img(src=require("@/img/content/gallery.jpg"), alt="").c-gallery-block__img
+									.c-gallery-block.swiper-slide
+										.c-gallery-block__preview.js-gallery-base
+											a(href=require("@/img/content/gallery.jpg")).c-gallery-item
+												img(src=require("@/img/content/gallery.jpg"), alt="").c-gallery-block__img
+							.d-flex.justify-content-end
+								.c-slider-primary__controls
+									button.swiper-button-prev
+									.js-slider-primary-counter.c-slider-primary__counter 1/6
+									button.swiper-button-next
+				.row
+					.col-md-6
+						h3.h-mb-8 Английский разговорный клуб для детей в Солнцево
+						.d-block.h-mb-7
+							h6.h-color-primary.h-font-weight-500 Расписание
+							p каждую субботу с  10.00 до 11.00. 
+						p.s-article
+							| Запись на встречу заранее обязательна. Цену занятий Вы можете узнать на странице 
+							a(href="#") стоимость
+					.col-md-6
+						h3.h-mb-8 Английский разговорный клуб для подростков в Солнцево
+						.d-block.h-mb-7
+							h6.h-color-primary.h-font-weight-500 Расписание
+							p Каждую субботу  с 11.10 до 12.10
+						p.s-article
+							| Запись на встречу заранее обязательна. Цену занятий Вы можете узнать на странице 
+							a(href="#") стоимость
+		include templates/footer.pug
+		include templates/icons.pug

@@ -1,0 +1,52 @@
+footer.c-footer
+	.container
+		.d-flex.flex-column.flex-lg-row.justify-content-between.h-mb-9
+			.c-logo.c-logo_sm.h-mb-4
+				img(src=require("@/img/content/logo.png"), alt="")
+			.d-flex.flex-wrap.flex-lg-nowrap
+				- var programs = ['Английский для детей', 'Английский для взрослых', 'Подготовка к ОГЭ и ЕГЭ', 'Международные экзамены', 'Разговорный клуб', 'Корпоративное обучение', 'Летние программы', 'Немецкий для детей', 'Немецкий для взрослых'];
+				nav.h-mr-9.h-mb-4
+					h5.h-mb-6.h-color-gray100.text-uppercase Программы
+					ul
+						each program in programs
+							li.h-mb-2
+								a(href="#").h-border-bottom-none.c-footer__link=program
+						-;
+				- var activities = ['Кулинарные мастер-классы', 'Творческие мастер-классы', 'Квесты', 'Экскурсии', 'Летний городской лагерь', 'Языковые лагеря по России', 'Языковые лагеря за рубежом'];
+				nav.h-mr-9.h-mb-4
+					h5.h-mb-6.h-color-gray100.text-uppercase Мероприятия
+					ul
+						each activity in activities
+							li.h-mb-2
+								a(href="#").h-border-bottom-none.c-footer__link=activity
+						-;
+				- var aboutUs = ['Методика', 'Преподаватели', 'Отзывы', 'Галерея', 'Частые вопросы'];
+				nav.h-mr-9.h-mb-4
+					h5.h-mb-6.h-color-gray100.text-uppercase О нас
+					ul
+						each link in aboutUs
+							li.h-mb-2
+								a(href="#").h-border-bottom-none.c-footer__link=link
+				nav.h-mb-4
+					a(href="#").c-footer__link
+						h5.h-mb-2.text-uppercase Онлайн-курсы
+					a(href="#").c-footer__link
+						h5.h-mb-2.text-uppercase стоимость
+					a(href="#").c-footer__link
+						h5.h-mb-2.text-uppercase контакты
+		.d-flex.justify-content-between.align-items-center
+			p.c-footer__copyright © 2020 Курсы иностранных языков
+			.c-socials
+				a(href="#").c-socials__link
+					svg.c-socials__icon.c-socials__icon_youtube
+						use(href="#icon-youtube")
+				a(href="#").c-socials__link
+					svg.c-socials__icon
+						use(href="#icon-facebook")
+				a(href="#").c-socials__link
+					svg.c-socials__icon
+						use(href="#icon-vk")
+				a(href="#").c-socials__link
+					svg.c-socials__icon
+						use(href="#icon-instagram")
+

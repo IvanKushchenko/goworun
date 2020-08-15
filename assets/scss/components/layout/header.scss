@@ -1,0 +1,55 @@
+.c-header{
+	padding: 2rem 0;
+	position: relative;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+
+	&__container{
+		@media (max-width: $bp-md) {
+			height: 100%;
+		}
+	}
+
+	@media (max-width: $bp-md) {
+		padding: 1rem 0;
+		height: 7rem;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 100;
+		background: #fff;
+	}
+
+	&__menu-btn{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 2rem;
+	}
+
+	&__phone{
+		font-size: 1.8rem;
+
+		@media (max-width: $bp-lg) {
+			font-size: 1.4rem;	
+		}
+	}
+
+	&__location{
+		@media (max-width: $bp-lg) {
+			font-size: 1.4rem;
+		}
+	}
+
+	&__email{
+		@media (max-width: $bp-lg) {
+			font-size: 1.4rem;
+		}
+	}
+
+	.c-logo{
+		@media (max-width: $bp-lg) {
+			max-width: calc(50px + 20vw);
+		}
+	}
+}

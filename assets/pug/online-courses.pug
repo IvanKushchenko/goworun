@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include templates/head.pug
+	body.o-body
+		include templates/header.pug
+		.o-body__content.container
+			.o-body__body
+				.row.h-mb-9
+					.col-md-6
+						h3.h-mb-3 Онлайн-курсы
+						p.h-color-gray100.
+							В современных условиях мы предлагаем Вам не рисковать своим здоровьем и присоединиться  к нашим занятиям английского и немецкого языков онлайн на платформе Zoom. 
+				.row.h-mb-9
+					.col-md-6
+						h4.h-mb-8.h-color-gray100 Преимущества
+						-
+							var advantages = [
+								{ color: 'purple', icon:"#icon-techniques",text: 'Вы занимаетесь по тем же программам с применением тех же методик, что и при очной форме обучения.' },
+								{ color: 'orange', icon:"#icon-clock",text: 'Вы имеете более богатый выбор времени занятий.' },
+								{ color: 'yellow', icon:"#icon-house",text: 'Вы можете заниматься дома, на даче и в любом удобном месте.' },
+								{ color: 'blue', icon:"#icon-snowflake",text: 'Вы сможете присутствовать на занятии, даже если за окном -40°' },
+								{ color: 'green', icon:"#icon-groups",text: 'Занятия проходят для детей и взрослых в небольших группах 2-6 человек, а также индивидуально. ' },
+								{ color: 'red', icon:"#icon-professional",text: 'Наши преподаватели имеют богатый опыт онлайн-преподавания и с радостью поделятся с Вами своими знаниями.' }
+							];
+						.row
+							each advantage in advantages
+								.col-md-6.h-mb-9.d-flex.flex-column.align-items-center
+									.c-icon-circle.c-icon-circle_sm.h-mb-5(class="c-icon-circle_" + advantage.color)
+										svg.c-icon-circle__icon
+											use(href=advantage.icon)
+									p.h-color-gray200.text-center.h-mb-0=advantage.text
+							-;
+					.col-md-6
+						img(src=require("@/img/content/online-courses.jpg"), alt="").h-border-radius-base.h-box-shadow-base
+
+				.d-block
+					h4.h-mb-9.h-color-gray100 Стоимость
+					.row
+						.col-md-7
+							p.h-mb-6 Минимальное количество занятий равно четырем, так же перед занятием проводится бесплатное пробное тестирование онлайн 
+					.row
+						.col-md-4
+							.c-price-block.d-flex.flex-column.justify-content-between
+								.d-flex.flex-column.align-items-center.h-mb-8
+									svg.c-price-block__icon.h-mb-3
+										use(href="#icon-cubes")
+									.d-flex.flex-column.align-items-center.h-mb-7
+										h4.c-price-block__title Для детей
+										span.c-price-block__subtitle.h-color-gray400 (6 - 17 лет)
+									.d-block.c-price-block__duration.h-mb-8
+										span.c-price-block__duration-title продолжительность
+									ul.c-list.d-flex.flex-column.justify-content-center
+										li.h-mb-2.justify-content-center в группе 4-6 человек
+										li.h-mb-2.justify-content-center 2 занятия в неделю
+										li.justify-content-center 96 занятий за год
+								.d-block
+									.d-flex.flex-column.align-items-center.h-mb-8
+										h3.c-price-block__price 4 400
+										span.c-price-block__price-title руб/мес
+									.d-flex.justify-content-center
+										button.c-btn.c-btn_lg.h-w-100.c-btn.c-btn_primary.c-btn_luminous.c-price-block__action.c-price-block__action_order Записаться
+		include templates/footer.pug
+		include templates/icons.pug

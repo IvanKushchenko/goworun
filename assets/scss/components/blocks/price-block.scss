@@ -1,0 +1,37 @@
+.c-price-block{
+	border-radius: 8px;
+	box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+	padding: 30px 40px;
+	background: #FDFDFD;
+
+	&__icon{
+		max-width: 100px;
+		max-height: 100px;
+	}
+
+	&__subtitle{
+		color: #777;
+	}
+
+	&__duration-title{
+		font-size: 1.2rem;
+		color: #777;
+	}
+
+	&__price{
+		font-size: 4.8rem;
+		color: $clr-primary;
+		font-weight: 500;
+		line-height: 1;
+	}
+
+	&__price-title{
+		color: $clr-primary;
+	}
+
+	&__action{
+		&_order{
+			max-width: 280px;
+		}
+	}
+}

@@ -1,0 +1,73 @@
+@import 
+	"variables",
+	"typography"
+;
+
+html {
+	font-size: 62.5%;
+	height: 100%;
+}
+
+body {
+	font-size: 1.6rem;
+	color: $clr-black;
+	font-family: $ff-primary;
+}
+
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $ff-secondary;
+	line-height: 1.3;
+}
+
+h2{
+	font-size: 3.6rem;
+}
+
+h3{
+	font-size: 2.4rem;
+}
+
+h4{
+	font-size: 2.2rem;
+}
+
+h5{
+	font-size: 1.8rem;
+}
+
+h6{
+	font-size: 1.6rem;
+}
+
+h7{
+	font-size: 1.2rem;
+}
+
+img{
+	max-width: 100%;
+}
+
+a{
+	text-decoration: none;
+	
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+button {
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+}

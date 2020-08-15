@@ -1,0 +1,36 @@
+.c-slider-reviews{
+
+	&__controls{
+		position: absolute;
+		top: 50%;
+	    left: 50%;
+		transform: translate(-50%, -50%);
+		width: calc(100% - 150px);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 50;
+		pointer-events: none;
+
+		@media (max-width: $bp-xl) {
+			width: 100%;
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next{
+		
+		background: url('../img/icons/arrow-right.svg') center center no-repeat;
+		background-size: 30px;
+		padding: 0;
+		height: 50px;
+		width: 55px;
+		transition: $base-transition;
+		pointer-events: auto;
+	
+	}
+
+	.swiper-button-prev{
+		transform: scaleX(-1);
+	}
+}

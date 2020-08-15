@@ -1,0 +1,12 @@
+.c-link{
+	text-decoration: none;
+	color: $clr-primary;
+	border-bottom: 1px solid $clr-primary;
+	transition: $base-transition;
+
+	&:hover{
+		color: $clr-primary-hover;
+		border-color: transparent;
+		text-decoration: none;
+	}
+}

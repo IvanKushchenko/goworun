@@ -1,0 +1,17 @@
+@import 
+	"~bootstrap/scss/functions",
+	"~bootstrap/scss/variables",
+	"~bootstrap/scss/mixins",
+	"~bootstrap/scss/reboot",
+	"~bootstrap/scss/grid",
+	"~bootstrap/scss/utilities/display",
+	"~bootstrap/scss/utilities/flex",
+	"~bootstrap/scss/utilities/text"
+;
+
+
+.container{
+	@media (min-width: 1200px) {
+		max-width: 1200px;
+	}
+}

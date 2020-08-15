@@ -1,0 +1,11 @@
+.c-certificate-block{
+	max-width: 250px;
+	overflow: hidden;
+	padding: 3px;
+
+	&__preview{
+		border-radius: 8px;
+		overflow: hidden;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	}
+}

@@ -1,0 +1,37 @@
+.c-gift-block{
+	min-width: 400px;
+	border-radius: 8px;
+	color: #fff;
+	background: linear-gradient(90deg, #009F43 0, #1CCF68 100%);
+	box-shadow: 0px 0px 25px rgba(0, 161, 68, 0.5);
+	padding: 2rem 1rem;
+
+	@media (max-width: $bp-sm) {
+		min-width: initial;
+		width: 100%;
+		height: auto;
+		padding: 1rem .5rem;
+		max-width: 400px;
+	}
+
+	&__value{
+		font-size: 9.6rem;
+		line-height: 1;
+
+		@media (max-width: $bp-sm) {
+			font-size: 7rem;
+		}
+	}
+
+	&__txt{
+		@media (max-width: $bp-sm) {
+			font-size: 1.4rem;
+		}
+	}
+
+	&__percent{
+		font-size: 4.8rem;
+		margin-bottom: 0;
+		line-height: 1.2;
+	}
+}

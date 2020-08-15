@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include templates/head.pug
+	body.o-body.o-body_main
+		include templates/header.pug
+		.o-body__content
+			.c-hero
+				.c-hero__slider.swiper-container#slider-hero
+					.swiper-wrapper
+						.swiper-slide.c-hero__slide
+							.c-hero__img
+								img(src=require("@/img/content/hero/banner1.jpg"), alt="")
+							.container.d-flex.align-items-end.c-hero__title-wrap
+								h2.c-hero__title.text-uppercase Центр <br> иностранных языков<br>для взрослых и детей
+						.swiper-slide.c-hero__slide
+							.c-hero__img
+								img(src=require("@/img/content/hero/banner2.jpg"), alt="")
+							.container.d-flex.align-items-end.c-hero__title-wrap
+								h2.c-hero__title.text-uppercase Дети выбирают нас
+						.swiper-slide.c-hero__slide
+							.c-hero__img
+								img(src=require("@/img/content/hero/banner3.jpg"), alt="")
+							.container.d-flex.align-items-end.c-hero__title-wrap
+								h2.c-hero__title.text-uppercase Занимайтесь всей семьей
+						.swiper-slide.c-hero__slide
+							.c-hero__img
+								img(src=require("@/img/content/hero/banner4.jpg"), alt="")
+							.container.d-flex.align-items-end.c-hero__title-wrap
+								h2.c-hero__title.text-uppercase учите английский онлайн
+				.container.c-hero__content.d-flex.justify-content-lg-end.align-items-end
+					form(action="").c-form-trial
+						.c-form-trial__header
+							h3.c-form-trial__title Бесплатное
+							p.c-form-trial__subtitle Пробное занятие
+						.c-form-trial__content
+							input(type="text" placeholder="Имя").c-field.h-mb-2
+							input(type="tel" placeholder="Телефон").c-field.h-mb-3
+							button.c-btn.c-btn_primary Записаться
+			.container
+				.c-section
+					h2.c-section__title Почему выбирают нас?
+					-
+						var advantages = [
+							{ color: 'green', icon:"#icon-atmosphere", title: 'Группы до 6 человек', text: 'В таких небольших группах гарантируется практически индивидуальный подход к каждому. Данное преимущество позволяет нашим ученикам добиваться наилучших результатов.' },
+							{ color: 'blue', icon:"#icon-professional", title: 'Профессиональные преподаватели', text: 'Все наши учителя - специалисты, имеющие дипломы о высшем педагогическом или лингвистическом образовании, много лет работающие в преподавании иностранных языков. Они помогут Вам и Вашим детям полюбить занятия' },
+							{ color: 'purple', icon:"#icon-techniques", title: 'Современные методики', text: 'Мы работаем только с передовыми иностранными пособиями, направленными, прежде всего, на развитие коммуникативных навыков. Аудио- и видеоматериалы, обучающие компьютерные игры - все это делает занятия более эффективными.' },
+							{ color: 'orange', icon:"#icon-game-form", title: 'Игровая форма обучения', text: 'На занятиях мы активно используем коммуникативные игры для детей и взрослых, закрепляем и отрабатываем лексический и грамматический материал в живом общении в обучающих играх. Это делает урок не только полезным, но и увлекательным.' },
+							{ color: 'yellow', icon:"#icon-atmosphere", title: 'Теплая атмосфера', text: 'Для нас важен каждый ученик, поэтому мы стремимся создать  дружественную атмосферу. За несколько месяцев наши группы становятся дружной семьей, где мы уже делимся последними новостями из жизни, а на урок приходим не только получить знания, но и отдохнуть душой. Разумеется, общаясь на иностранном языке.' },
+							{ color: 'red', icon:"#icon-reputation", title: 'Надежная репутация', text: 'Курсы иностранных языков «Говорун» в Солнцево уже 9 лет помогают Вам в успешном овладении английским и немецким языками.К нам приходят по рекомендациям друзей и родственников. Спросите, наверняка кто-то и вашего круга общения - наш ученик!' }
+						];
+					
+					.row.d-flex.flex-wrap.justify-content-center
+						each advantage in advantages
+							.col-sm-6.col-md-4.col-lg-4.c-advantage.d-flex.flex-column.align-items-center
+								.c-advantage__icon.c-icon-circle_md.c-icon-circle_md-lg.c-icon-circle.h-mb-8(class="c-icon-circle_" + advantage.color)
+									svg.c-icon-circle__icon
+										use(href=advantage.icon)
+								h3.h-color-gray100.text-center.h-font-weight-500.h-mb-3.c-advantage__title=advantage.title
+								p.h-color-gray200.text-center.h-mb-0.c-advantage__description=advantage.text
+						-;
+				.c-section.h-mb-0
+					h2.c-section__title Курсы
+					-
+						var courses = [
+							{ title: 'Для детей', img: 'kids'},
+							{ title: 'Для подростков', img: 'teenager'},
+							{ title: 'Подготовка к ОГЭ и ЕГЭ', img: 'ege' },
+							{ title: 'Для взрослых', img: 'adult' },
+							{ title: 'Подготовка к международным экзаменам', img: 'international-exem' },
+							{ title: 'Дополнительные мероприятия', img: 'additional-activity' }
+						];
+					.row.d-flex.flex-wrap
+						
+						each course in courses
+							.col-sm-6.col-lg-4
+								.c-course-block
+									.c-course-block__preview
+										img(src=require("@/img/content/courses/" + course.img + ".jpg"), alt="").c-course-block__img
+									h4.c-course-block__title=course.title
+									.c-course-block__actions
+										button.c-btn.c-btn_outline.c-btn_with-icon.h-mb-2
+											.c-btn__icon
+												img(src=require("@/img/content/flags/england.jpg"), alt="")
+											| Английский
+										button.c-btn.c-btn_outline.c-btn_with-icon
+											.c-btn__icon
+												img(src=require("@/img/content/flags/deutchland.jpg"), alt="")
+											| Немецкий
+						-;
+			.c-section.c-section_news
+				.container
+					h2.c-section__title Новости
+					.row
+						each news in [1,2,3,4]
+							.col-lg-6.h-mb-7
+								.c-news-block.d-flex.flex-column.flex-md-row
+									.c-news-block__preview
+										img(src=require("@/img/content/news/1-big.jpg"), alt="").c-news-block__img
+									.c-news-block__content
+										h4.c-news-block__title.h-mb-4.h-color-gray100.h-font-weight-500 Молоко полезно детям
+										p.c-news-block__description.h-mb-2.h-color-gray200.
+											Пейте, дети молоко — будете здоровы! Так поётся в одном известном мультфильме, и о том, что детям молоко жизненно необходимо знает каждый.
+										a(href="#").c-link Читать
+						-;
+					.d-flex.justify-content-center
+						a(href="#").c-btn.c-btn_primary.h-text-transform-inherit Больше новостей
+			.container
+				.c-section
+					h2.c-section__title Галерея
+					.swiper-container.h-mb-5#slider-gallery
+						.swiper-wrapper.d-flex
+							each slide in [1,2,3]
+								.c-gallery-block.swiper-slide
+									.c-gallery-block__preview
+										img(src=require("@/img/content/gallery.jpg"), alt="").c-gallery-block__img
+									h4.c-gallery-block__title Пикник по-немецки
+							-;
+					.d-flex.justify-content-center
+						a(href="#").c-btn.c-btn_primary.h-text-transform-inherit Больше фотографий
+				.c-section
+					h2.c-section__title Контакты
+					.row.h-mb-6
+						.col-md-4
+							.d-flex.flex-column.align-items-center
+								h3.h-mb-8.h-color-gray100 Адрес
+								.c-icon-circle.c-icon-circle_md.c-icon-circle_md-lg.h-mb-8(class="c-icon-circle_orange")
+									svg.c-icon-circle__icon
+										use(href="#icon-pin")
+								h4.text-center.font-weight-normal г. Москва, улица Богданова, 52, корпус 2
+						.col-md-4
+							.d-flex.flex-column.align-items-center
+								h3.h-mb-8.h-color-gray100 Телефон
+								.c-icon-circle.c-icon-circle_md.c-icon-circle_md-lg.h-mb-8(class="c-icon-circle_blue")
+									svg.c-icon-circle__icon
+										use(href="#icon-phone")
+								h4.text-center.font-weight-normal.d-flex.flex-column
+									p +7 (495) 971-03-19
+									p +7 (901) 547-63-19
+						.col-md-4
+							.d-flex.flex-column.align-items-center
+								h3.h-mb-8.h-color-gray100 E-mail
+								.c-icon-circle.c-icon-circle_md.c-icon-circle_md-lg.h-mb-8(class="c-icon-circle_green")
+									svg.c-icon-circle__icon
+										use(href="#icon-message")
+								h4.text-center.font-weight-normal info@goworun.com
+					.c-map
+						<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A44d221ce1f92374d17ffc8aef96d52cc79eea75baf52992c37b08feb0de1e56b&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+		include templates/footer.pug
+		include templates/icons.pug
+		

@@ -1,0 +1,73 @@
+.c-icon-circle{
+	$parent: &;
+	width: 14rem;
+	height: 14rem;
+	position: relative;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+
+	&:before{
+		content: '';
+		border-radius: 50%;
+		width: 130%;
+		height: 130%;
+		position: absolute;
+		top: -15%;
+		left: -15%;
+		z-index: -1;
+	}
+
+	$colors: ('green': $clr-green, 'blue': $clr-blue, 'red': $clr-red, 'orange': $clr-orange, 'purple': $clr-purple, 'yellow': $clr-yellow);
+
+	@each $colorName, $colorValue in $colors {
+		&_#{$colorName}{
+			background: $colorValue;
+			&:before{
+				background: $colorValue;
+				opacity: .2;
+			}
+		}
+	}
+
+	&_sm{
+		width: 7.5rem;
+		height: 7.5rem;
+	}
+
+	&_md{
+		width: 10rem;
+		height: 10rem;
+	}
+
+	&_md-lg{
+		@media (min-width: $bp-md) {
+			width: 14rem;
+			height: 14rem;
+		}
+	}
+
+	&__icon{
+		width: 7rem;
+		height: 7rem;
+		
+		#{$parent}_sm &{
+			width: 3.5rem;	
+			height: 3.5rem;	
+		}
+		
+		#{$parent}_md &{
+			width: 4.5rem;
+			height: 4.5rem;
+		}
+
+		#{$parent}_md-lg &{
+			@media (min-width: $bp-md) {
+				width: 7rem;
+				height: 7rem;
+			}
+		}
+	}
+}

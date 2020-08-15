@@ -1,0 +1,37 @@
+.c-gallery-item{
+	position: relative;
+	display: block;
+	
+	&:hover{
+		&:before,
+		&:after{
+			opacity: 1;
+		}
+	}
+
+	&:before{
+		content: '';
+		background: url('../img/icons/zoom.svg') center center no-repeat;
+		background-size: contain;
+		position: absolute;
+		z-index: 5;
+		width: 20px;
+		height: 20px;
+		top: calc(50% - 10px);
+		left: calc(50% - 10px);
+		opacity: 0;
+		transition: $base-transition;
+	}
+
+	&:after{
+		opacity: 0;
+		content: '';
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: rgba(0,0,0,.4);
+		position: absolute;
+		transition: $base-transition;
+	}
+}

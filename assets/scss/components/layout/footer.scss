@@ -1,0 +1,20 @@
+.c-footer{
+	padding: 2rem 0;
+	padding-bottom: 3rem;
+	box-shadow: 0 -2px 4px rgba(0,0,0,.1);
+	
+	&__copyright{
+		margin-bottom: 0;
+		color: $clr-gray300;
+	}
+
+	&__link{
+		transition: $base-transition;
+		color: $clr-gray200;
+		border-bottom: none;
+
+		&:hover{
+			color: $clr-primary;
+		}
+	}
+}

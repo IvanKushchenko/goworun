@@ -1,0 +1,77 @@
+/*==============================
+=            COLORS            =
+==============================*/
+
+/* Base */
+
+$sarandiel: #00A144;
+$appolyon: #008C3B;
+$vequaniel: #333;
+$zaphreal: #999;
+$mariuk: #0DDFAC;
+$rachmiel: #1F94FF;
+$barattiel: #B81BEF;
+$yerachmiel: #FF782C;
+$zabkiel: #FFD600;
+$domiel: #FF3F3F;
+$hayyel: #444;
+$sizouze: #555;
+$quabriel: #666;
+$ruhiel: #FCFCFC;
+$adoel: #E9E9E9;
+$hasdiel: #FBFBFB;
+
+$clr-primary: $sarandiel;
+$clr-primary-hover: $appolyon;
+$clr-black: $vequaniel;
+$clr-green: $mariuk;
+$clr-blue: $rachmiel;
+$clr-purple: $barattiel;
+$clr-orange: $yerachmiel;
+$clr-yellow: $zabkiel;
+$clr-red: $domiel;
+$clr-gray100: $hayyel;
+$clr-gray200: $sizouze;
+$clr-field-placeholder: $zaphreal;
+$clr-gray300: $zaphreal;
+$clr-gray400: $quabriel;
+$clr-gray500: $adoel;
+$clr-gray600: $hasdiel;
+$clr-gray-bg: $ruhiel;
+
+/*=====  End of COLORS  ======*/
+
+
+/*===================================
+=            Breakpoints            =
+===================================*/
+
+$bp-sm: map-get($grid-breakpoints, "sm");
+$bp-md: map-get($grid-breakpoints, "md");
+$bp-lg: map-get($grid-breakpoints, "lg");
+$bp-xl: map-get($grid-breakpoints, "xl");
+
+/*=====  End of Breakpoints  ======*/
+
+
+/*==================================
+=            Typography            =
+==================================*/
+
+$ff-primary: 'Open Sans', Arial, sans-serif;
+$ff-secondary: Ubuntu, Arial, sans-serif;
+
+
+/*=====  End of Typography  ======*/
+
+
+
+/*=============================
+=            Other            =
+=============================*/
+
+
+$base-transition: .3s ease-in-out;
+
+
+/*=====  End of Other  ======*/

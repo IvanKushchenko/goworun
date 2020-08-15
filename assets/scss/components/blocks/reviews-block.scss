@@ -1,0 +1,41 @@
+.c-reviews-block{
+	padding: 8rem 0;
+
+	@media (max-width: $bp-lg) {
+		padding: 8rem 10%;
+	}
+
+	@media (max-width: $bp-md) {
+		padding: 3rem 5%;
+	}
+
+	&__txt{
+		max-width: 780px;
+		text-align: center;
+		line-height: 3.5rem;
+		margin-bottom: 2rem;
+	}
+
+	&__author{
+		position: relative;
+
+		&:before{
+			content: '';
+			width: 50px;
+			height: 1px;
+			background: $clr-gray200;
+			position: absolute;
+			left: -50px;
+			top: 50%;
+			transform: translate(-50%, -100%);
+		}
+	}
+
+	&__avatar{
+		border-radius: 50%;
+		border: 5px solid $clr-red;
+		width: 73px;
+		height: 73px;
+		margin-right: 20px;
+	}
+}

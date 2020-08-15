@@ -1,0 +1,51 @@
+.c-slider-teachers{
+	padding-bottom: 10px;
+
+	&__controls{
+		position: relative;
+		z-index: 4;
+
+		@media (max-width: $bp-md) {
+			position: absolute;
+			top: 40vw;
+			width: calc(100% - 50px);
+			left: 50%;
+			transform: translateX(-50%);
+			justify-content: space-between;
+			box-shadow: none;
+			pointer-events: none;
+			overflow: visible;
+		}
+	}
+
+	&__counter{
+		@media (max-width: $bp-md) {
+			display: none;
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next{
+
+		@media (max-width: $bp-md) {
+			border-radius: 8px;
+			box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+			pointer-events: auto;
+		}
+
+	}
+
+	&__footer{
+		max-width: 450px;
+		display: flex;
+		justify-content: flex-end;
+
+		@media (max-width: $bp-lg) {
+			max-width: 320px;
+		}
+
+		@media (max-width: $bp-md) {
+			max-width: initial;
+		}
+	}
+}

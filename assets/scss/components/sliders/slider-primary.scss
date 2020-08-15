@@ -1,0 +1,35 @@
+.c-slider-primary{
+
+	&__controls{
+		height: 5rem;
+		display: flex;
+		align-items: center;
+		border-radius: 8px;
+		box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+		overflow: hidden;
+	}
+
+	&__counter{
+		padding: 0 10px;
+	}
+
+	.swiper-container{
+		padding: 10px;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next{
+		background: #fff url('../img/icons/arrow-right.svg') center center no-repeat;
+		background-size: 20px;
+		padding: 0;
+		height: 100%;
+		width: 55px;
+		border-left: 1px solid $clr-gray500;
+		transition: $base-transition;
+		
+	}
+	
+	.swiper-button-prev{
+		transform: scaleX(-1);
+	}
+}

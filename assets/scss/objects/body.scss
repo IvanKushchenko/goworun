@@ -1,0 +1,33 @@
+.o-body{
+	$parent: &;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	&__content{
+		#{$parent}:not(#{$parent}_main):not(#{$parent}_single) &{
+			padding-top: 8rem;
+		}
+		padding-bottom: 10rem;
+		flex-grow: 1;
+	}
+
+	&_single{
+		@media (max-width: $bp-md) {
+			padding-top: 7rem;
+		}
+	}
+
+	&__title{
+		margin-bottom: 2rem;
+		// font-size: 3.4rem;
+
+		// @media (max-width: $bp-sm) {
+		// 	margin-bottom: 2rem;
+		// }
+	}
+
+	&__body{
+		padding-bottom: 10rem;
+	}
+}

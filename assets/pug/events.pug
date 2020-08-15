@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include templates/head.pug
+	body.o-body
+		include templates/header.pug
+		.o-body__content.container
+			h2.o-body__title Мероприятия
+			.o-body__body
+				.row
+					-
+						var events = [{color: 'orange', title: 'Кулинарные <br> мастер-классы на <br> английском', icon: 'bake'}, {color: 'green', title: 'Творческие <br> мастер-классы на <br> английском', icon: 'paint'}, {color: 'red', title: 'Квесты <br> на английском', icon: 'searching'}, {color: 'blue', title: 'Экскурсии <br> на английском', icon: 'backpack'}, {color: 'yellow', title: 'Летний городской <br> лагерь', icon: 'tent'}, {color: 'red', title: 'Языковые лагеря <br> по России', icon: 'moscow'}, {color: 'blue', title: 'Языковые лагеря <br> за рубежом', icon: 'europe'}]
+					each event in events
+						.col-md-6.h-mb-6
+							.c-card-preview.d-flex.flex-column.justify-content-between(class="c-card-preview_"+event.color)
+								.d-flex.justify-content-between.h-mb-4
+									h3.c-card-preview__title.h-mr-3!=event.title
+									img(src=require("@/img/icons/"+event.icon+".svg")).c-card-preview__icon
+								.row
+									.col-md-6
+										button.c-btn.c-btn_outline.c-card-preview__action(class="c-btn_"+event.color).h-w-100 Подробнее
+		include templates/footer.pug
+		include templates/icons.pug

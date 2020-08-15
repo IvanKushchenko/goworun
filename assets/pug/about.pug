@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		include templates/head.pug
+	body.o-body
+		include templates/header.pug
+		.o-body__content.container
+			h2.o-body__title О нас
+			.o-body__body
+				.row.h-mb-9
+					.col-md-6
+						h3.h-color-gray200.h-mb-3 Методика
+						p.h-color-gray100.
+							Вот уже 9 лет языковой центр  "Говорун" является Вашим надежным помощником в успешном овладении навыками английской, немецкой устной и письменной речи.
+
+							Мы поможем Вам быстро преодолеть языковые барьеры, которые возникают при общении, чтении, аудировании и письме. В нашем арсенале – современные методики и средства обучения. Наш главный принцип - индивидуальный подход к каждому ученику, основанный на его потребностях, возможностях и интересах.
+					.col-md-6
+						img(src=require("@/img/content/teacher_goworun.svg"), alt="")
+				.d-block.h-mb-9
+					h3.h-color-gray200.h-mb-3.h-font-weight-500 Наши преподаватели
+					.row
+						.col-lg-10
+							.c-slider-teachers.c-slider-primary
+								.swiper-container#slider-teachers
+									.swiper-wrapper
+										.swiper-slide
+											.d-flex.flex-column.align-items-start.flex-md-row.c-teacher-block
+												img(src=require("@/img/content/teacher.jpg"), alt="").c-teacher-block__img.h-mr-4
+												.c-teacher-block__content
+													.h-mb-4
+														h6.h-mb-1.h-color-primary ФИО
+														p Екатерина Иванова
+													.h-mb-4
+														h6.h-mb-1.h-color-primary Образование
+														p EMBA университета Синергия «Президентская программа», диплом МГЛУ
+													.h-mb-4
+														h6.h-mb-1.h-color-primary Квалификация
+														p Курсы Trinity College Dip TESOL, CELTYL и IH FTBE  
+													.h-mb-4
+														h6.h-mb-1.h-color-primary Сертификаты
+														.js-gallery-base.d-flex.flex-wrap
+															a(href=require("@/img/content/teacher.jpg")).c-gallery-item.c-teacher-block__certificate
+																img(src=require("@/img/content/teacher.jpg"), alt="")
+															a(href=require("@/img/content/teacher.jpg")).c-gallery-item.c-teacher-block__certificate
+																img(src=require("@/img/content/teacher.jpg"), alt="")
+										.swiper-slide
+											.d-flex.flex-column.align-items-start.flex-md-row.c-teacher-block
+												.c-teacher-block__content
+													.h-mb-4
+														h6.h-mb-1.h-color-primary ФИО
+														p Екатерина Иванова
+										
+								.c-slider-teachers__footer
+									.c-slider-primary__controls.c-slider-teachers__controls
+										button.swiper-button-prev
+										.js-slider-teachers-counter.c-slider-teachers__counter.c-slider-primary__counter 1/6
+										button.swiper-button-next
+
+				.d-block.c-reviews.h-mb-9
+					h3.h-color-gray200.h-mb-3.h-font-weight-500 Отзывы о нашей работе
+					.c-slider-reviews
+						.swiper-container#slider-reviews
+							.swiper-wrapper
+								.swiper-slide
+									.c-reviews-block.d-flex.flex-column.align-items-center
+										h3.c-reviews-block__txt.h-font-weight-500 Занимаюсь английским в группе для начинающих. Всё очень нравится. Нас всего 4 человека, занятия всегда проходят весело, позитивно. Результатами очень довольна!
+										.c-reviews-block__author.d-flex.align-items-center
+											img(src=require("@/img/content/teacher.jpg"), alt="").c-reviews-block__avatar
+											.d-flex.flex-column
+												p.c-reviews-block__name.h-color-gray200.h-mb-1 Кристина Гечер
+												p.c-reviews-block__profile.h-color-gray400 @christina.rtk
+								.swiper-slide
+									.c-reviews-block.d-flex.flex-column.align-items-center
+										h3.c-reviews-block__txt.h-font-weight-500 Занимаюсь английским в группе для начинающих. Всё очень нравится. Нас всего 4 человека, занятия всегда проходят весело, позитивно. Результатами очень довольна!
+										.c-reviews-block__author.d-flex.align-items-center
+											img(src=require("@/img/content/teacher.jpg"), alt="").c-reviews-block__avatar
+											.d-flex.flex-column
+												p.c-reviews-block__name.h-color-gray200.h-mb-1 Кристина Гечер
+												p.c-reviews-block__profile.h-color-gray400 @christina.rtk
+						.c-slider-reviews__controls
+							button.swiper-button-prev
+							button.swiper-button-next
+				.d-block.h-mb-9
+					h3.h-color-gray200.h-mb-3.h-font-weight-500 Фотографии с мероприятий
+					.row
+						each galleryItem in [1,2,3,4,5,6]
+							.col-md-4
+								.c-gallery-block.d-block.h-mb-6
+									a(href="#").c-gallery-block__preview.js-gallery-item.c-gallery-item(data-images='["img/gallery.jpg", "img/kids.jpg"]')
+										img(src=require("@/img/content/gallery.jpg"), alt="").c-gallery-block__img
+									h4.c-gallery-block__title Пикник по-немецки
+						-;
+				.d-block
+					h3.h-color-gray200.h-mb-3.h-font-weight-500 Частые вопросы
+					.js-qa-grid.d-flex.flex-wrap.align-items-start
+						-
+							var questions = [{color: 'primary', question: 'Что нужно, чтобы записаться к Вам на курсы?', answer: 'Вам нужно позвонить нам или оставить свою заявку на нашем сайте. Далее мы пригласим Вас на пробное тестирование и беседу с преподавателем и предложим подходящую группу. '}, {color: 'blue', question: 'Зачем необходимо тестирование, сколько оно занимает времени, что в него входит?', answer: 'Тестирование занимает 20-30 минут. В него входит небольшой письменный тест и устная беседа с преподавателем. Тестирование позволит нам максимально верно определить Ваш уровень и подобрать Вам группу и программу. Тестирование в нашем центре проводится бесплатно.'}, {color: 'green', question: 'Какое оптимальное количество человек в группе? Сколько занимается в Ваших группах?', answer: 'В наших группах максимально занимается по 6 человек. Данное количество мы считаем оптимальным, так как занятия в небольших группах позволяют ученикам добиваться быстрее наилучших результатов и обеспечивают индивидуальный подход.'}, {color: 'orange', question: 'Какие учебники Вы используете? Входит ли литература в стоимость курса?', answer: 'Мы работаем с учебниками самых авторитетных международных издательств (Peason Education (Longman), Macmillan, Cambridge, Oxford University Press). Данные пособия аутентичны и делают основной упор на развитие коммуникативных навыков, но не пренебрегают основами грамматики. На занятиях также используются видео- и аудиоматериалы, игровые компоненты, Multi-Rom. В дополнение к основным пособиям на занятиях Вы будете получать много полезного раздаточного материала. Комплект учебников включает в себя книгу для студента, рабочую тетрадь и CDROM с упражнениями для закрепления материала. Учебная литература не входит в стоимость курса.'},{color: 'yellow', question: 'Кто преподает на Ваших курсах?', answer: 'Все наши преподаватели имеют профессиональное педагогическое или лингвистическое образование, а также опыт работы с детьми и взрослыми по современным методикам. Наши учителя постоянно общаются с носителями языка, проходят курсы повышения квалификации как в России, так и за рубежом, имеют международные сертификаты, подтверждающие знание иностранного языка. Молодой, творческий, профессиональный коллектив всегда рад поделиться с Вами и Вашими детьми своими знаниями.'}, {color: 'purple', question: 'Сколько нужно времени, чтобы выучить язык на Ваших курсах?', answer: 'Все зависит от вашего первоначального уровня и уровня, к которому Вы стремитесь. Наша программа рассчитана на прохождение одного курса (одного уровня) за 5-6 месяцев. Это оптимальное время, которое позволит Вам усвоить программу, если, конечно, Вы добросовестно выполняете домашние задания.'}]
+						each question in questions
+							.js-qa-grid-item.c-qa-block(class="c-qa-block_"+question.color)
+								.c-qa-block__header
+									h5.h-font-weight-500=question.question
+								.c-qa-block__content
+									p.h-mb-0=question.answer
+
+		include templates/footer.pug
+		include templates/icons.pug

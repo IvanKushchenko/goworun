@@ -1,0 +1,28 @@
+header.c-header#header
+	.container.c-header__container
+		button.c-hamburger.c-header__menu-btn.d-md-none
+			svg.c-hamburger__icon
+				use(href="#icon-hamburger")
+		.d-flex.justify-content-center.justify-content-md-between.align-items-center.h-100
+			.c-logo.c-header__logo
+				img(src=require("@/img/content/logo.png"), alt="")
+			.d-none.d-md-flex
+				.d-flex.flex-column.align-items-end.h-mr-4
+					strong.c-header__phone.h-mb-1 +7 (495) 971-03-19
+					span.c-header__location.h-mb-1 г.Москва, ул. Богданова 52/2
+					span.c-header__email info@goworun.com
+				.d-flex.flex-column
+					button.c-btn.c-btn_primary.h-mb-2 Позвонить
+					button.c-btn.c-btn_outline Записаться
+		nav.c-nav
+			ul.c-nav__list
+				li.c-nav__item
+					a(href="#").c-nav__link Программы
+				li.c-nav__item
+					a(href="#").c-nav__link Мероприятия
+				li.c-nav__item
+					a(href="#").c-nav__link Онлайн-курсы
+				li.c-nav__item
+					a(href="#").c-nav__link Стоимость
+				li.c-nav__item
+					a(href="#").c-nav__link О нас

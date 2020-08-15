@@ -1,0 +1,37 @@
+.c-card-preview{
+	$parent: &;
+	border-radius: 0.8rem;
+	padding: 2rem 3rem;
+	min-height: 230px;
+	border: 2px solid transparent;
+	
+	@media (max-width: $bp-md) {
+		min-height: initial;
+	}
+
+	&__title{
+		font-weight: 500;
+		font-size: 2.5rem;
+
+		@media (max-width: $bp-sm) {
+			font-size: 2rem;
+		}
+	}
+
+	&__icon{
+		max-width: 140px;
+
+		@media (max-width: $bp-sm) {
+			max-width: 80px;
+			max-height: 80px;
+		}
+	}
+
+	$colors: ('green': $clr-green, 'blue': $clr-blue, 'red': $clr-red, 'orange': $clr-orange, 'yellow': $clr-yellow);
+
+	@each $colorName, $colorValue in $colors {
+		&_#{$colorName} {
+			border-color: $colorValue;
+		}
+	}
+}

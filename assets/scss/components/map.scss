@@ -1,0 +1,10 @@
+.c-map{
+	overflow: hidden;
+	border-radius: 2rem;
+	background: #999;
+	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.15);
+
+	@media (max-width: $bp-md) {
+		max-height: 300px;
+	}
+}

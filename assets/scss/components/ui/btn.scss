@@ -1,0 +1,83 @@
+.c-btn{
+	$parent: &;
+	text-transform: uppercase;
+	border-radius: 8px;
+	padding: .8rem 0px;
+	min-width: 180px;
+	text-align: center;
+	font-weight: 500;
+	background: #fff;
+	transition: $base-transition;
+	
+	&_luminous{
+		box-shadow: 0px 0px 25px rgba(0, 161, 68, 0.5);
+	}
+
+	&:hover{
+		color: #fff;
+		text-decoration: none;
+	}
+
+	&_primary{
+		background: $clr-primary;
+		color: #fff;
+
+		&:hover{
+			background: $clr-primary-hover;
+		}
+	}
+
+	&_lg{
+		padding: 1.3rem 0px;
+	}
+
+	&_outline{
+		padding: .7rem 0px;
+		border: 1px solid $clr-primary;
+		color: $clr-primary;
+
+		&:hover{
+			background: $clr-primary;
+			color: #fff;
+		}
+	}
+
+	&_with-icon{
+		padding-left: 2rem;
+		padding-right: 2rem;
+		display: flex;
+		text-transform: inherit;
+	}
+
+	&__icon{
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		border: 1px solid #fff;
+		overflow: hidden;
+		margin-right: 1rem;
+
+		img{
+			width: 100%;
+			height: 100%;
+			display: block;
+			object-fit: fill;
+		}
+	}
+
+
+	$colors: ('green': $clr-green, 'blue': $clr-blue, 'red': $clr-red, 'orange': $clr-orange, 'yellow': $clr-yellow);
+
+	@each $colorName, $colorValue in $colors {
+		@at-root #{$parent}_outline#{$parent}_#{$colorName} {
+			border-color: $colorValue;
+			color: $colorValue;
+
+			&:hover{
+				background: $colorValue;
+				color: #fff;
+			}
+		}
+	}
+
+}
