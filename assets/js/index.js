@@ -4,6 +4,7 @@ import GalleryLightbox from './GalleryLightbox';
 import GalleryBase from './GalleryBase';
 import Header from './modules/header';
 import Prices from './modules/prices';
+import PricesOnlineCourses from './modules/pricesOnlineCourses';
 GalleryLightbox.init();
 GalleryBase.init();
 GridQa.init();

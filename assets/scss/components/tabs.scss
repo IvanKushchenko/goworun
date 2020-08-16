@@ -1,0 +1,30 @@
+.c-tabs{
+
+	&__button{
+		padding: .8rem 1.2rem;
+		color: $clr-primary;
+		background: #fff;
+		transition: $base-transition;
+		border: 1px solid $clr-primary;
+	
+		&:first-child{
+			border-top-left-radius: .8rem;
+			border-bottom-left-radius: .8rem;
+		}
+
+		&:last-child{
+			border-top-right-radius: .8rem;
+			border-bottom-right-radius: .8rem;
+		}
+
+		&:not(:last-child){
+			border-right: transparent;
+		}
+		
+		&.is-active,
+		&:hover{
+			color: #fff;
+			background: $clr-primary;
+		}
+	}
+}

@@ -57,6 +57,12 @@ module.exports = {
 			minify: false,
 			hash: true
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'cost.html',
+			template: './assets/pug/cost.pug',
+			minify: false,
+			hash: true
+		}),
 		new VueLoaderPlugin(),
 		/* Other pages */
 		// new HtmlWebpackPlugin({

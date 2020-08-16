@@ -4225,6 +4225,13 @@ button:focus {
   box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
   padding: 30px 40px;
   background: #FDFDFD;
+  border-top: 3px solid #00A144;
+  position: relative;
+  overflow: hidden;
+}
+
+.c-price-block_has-communication-type {
+  padding-top: 60px;
 }
 
 .c-price-block__icon {
@@ -4234,6 +4241,74 @@ button:focus {
 
 .c-price-block__subtitle {
   color: #777;
+}
+
+.c-price-block__communication-type > .c-tabs__nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.c-price-block__communication-type > .c-tabs__nav .c-tabs__button {
+  flex-grow: 1;
+  border-radius: 0;
+}
+
+.c-price-block__communication-type > .c-tabs__nav .c-tabs__button:first-child {
+  border-left: none;
+}
+
+.c-price-block__communication-type > .c-tabs__nav .c-tabs__button:last-child {
+  border-right: none;
+}
+
+.c-price-block__info {
+  background: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 27px;
+  height: 27px;
+  border: 2px solid #00A144;
+}
+
+.c-price-block__info svg {
+  fill: #00A144;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.c-price-block__info:hover {
+  background: #00A144;
+}
+
+.c-price-block__info:hover svg {
+  fill: #fff;
+}
+
+.c-price-block__price-meta {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.c-price-block__duration {
+  text-align: center;
+}
+
+.c-price-block__duration .c-tabs__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+.c-price-block__duration .c-tabs__content ul li {
+  display: flex;
+  justify-content: center;
+}
+
+.c-price-block__duration .c-tabs__content ul li:not(:last-child) {
+  margin-bottom: .8rem;
 }
 
 .c-price-block__duration-title {
@@ -4663,6 +4738,44 @@ button:focus {
   transition: 0.3s ease-in-out;
 }
 
+.c-tabs__button {
+  padding: .8rem 1.2rem;
+  color: #00A144;
+  background: #fff;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #00A144;
+}
+
+.c-tabs__button:first-child {
+  border-top-left-radius: .8rem;
+  border-bottom-left-radius: .8rem;
+}
+
+.c-tabs__button:last-child {
+  border-top-right-radius: .8rem;
+  border-bottom-right-radius: .8rem;
+}
+
+.c-tabs__button:not(:last-child) {
+  border-right: transparent;
+}
+
+.c-tabs__button.is-active, .c-tabs__button:hover {
+  color: #fff;
+  background: #00A144;
+}
+
+.c-popover {
+  width: 100%;
+  max-width: 220px;
+  padding: 1rem 2rem;
+  background: #fff;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15);
+  font-size: 1.2rem;
+  border-radius: .8rem;
+  margin-top: -10px;
+}
+
 .c-form-trial {
   border-radius: 0.8rem;
   overflow: hidden;
@@ -5079,6 +5192,10 @@ button:focus {
 
 .h-color-gray400 {
   color: #666 !important;
+}
+
+.h-color-red {
+  color: #FF3F3F !important;
 }
 
 .h-color-primary {
